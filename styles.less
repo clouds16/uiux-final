@@ -1,0 +1,179 @@
+
+* {
+	box-sizing: border-box;
+}
+
+/* color theme */
+
+@base-violet : rgb(85,85,223) ;
+@base-white : rbg(255,255,255);
+@base-blue : rgba(24, 202, 214, 0.6) ;
+@base-transparent : rbga(255,255,255, .75);
+@base-dark : rgb(10,10,10);
+@standard-padding: 15px 15px;
+
+
+button {
+	padding: 0.35em 1.2em;
+	border: 0.1em solid  @base-dark;    /* example of mixin */
+	margin: 0 0.3em 0.3em 0;
+	height: 40px;
+	width: auto;
+	border-radius: 0.12em;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: 'Roboto',sans-serif;
+	font-weight: 300;
+	background-color:@base-transparent;
+	text-align: center;
+	transition: all 0.2s;
+	&:hover {
+		color: #000000;
+		background-color: @base-blue;
+	}
+}
+
+
+.backdrop {
+	height: 80vh;
+	background-image: linear-gradient( rgb(255,255,255),rgb(85,85,223));
+}
+
+
+
+
+body {
+	font-family: Arial;
+	margin: 0;
+}
+.header {
+	padding: 60px;
+	text-align: center;
+	background: @base-blue;
+	color: @base-white;
+}
+.navbar {
+	display: flex;
+	background-color:@base-dark;
+	height: 10%;
+	a {
+		color: @base-white;
+		padding: @standard-padding;
+		text-decoration: none;
+		text-align: center;
+		&:hover {
+			background-color: @base-white;
+			color: @base-dark;
+		}
+	}
+}
+#hamitems {
+	display: flex;
+	a {
+		flex-grow: 1;
+		flex-basis: 0;
+		padding: 10px;
+		color: white;
+		text-decoration: none;
+		text-align: center;
+		&:hover {
+			background: @base-dark;
+		}
+	}
+}
+#hamnav {
+	label {
+		display: none;
+	}
+}
+#hamburger {
+	display: none;
+}
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+.side {
+	flex: 30%;
+	background-color: @base-white;
+	padding: 20px;
+}
+.main {
+	flex: 70%;
+	background-color: @base-white;
+	padding: 20px;
+}
+.fakeimg {
+	background-color: @base-white ;
+	width: 100%;
+	padding: 20px;
+}
+.footer {
+	padding: 20px;
+	text-align: center;
+	background: @base-white;
+}
+.mybutton {
+	width: auto;
+	height: 40px;
+	border-radius: 10px;
+	background-color: @base-transparent;
+	border-color: none;
+}
+[aria-expanded='false'] {
+	background-color: red;
+}
+
+@media (max-width: 700px) {
+	.mybutton {
+		float: right;
+		margin: 20px 20px;
+		background-color: @base-white;
+	}
+}
+
+
+.dataitem {
+	width: auto;
+	height:20% ;
+	background-color: aqua;
+	border-radius: 15px;
+	padding: 20px;
+	margin: 20px;
+  }
+
+  .beach-images {
+	object-fit: scale-down;
+	height: 100%;
+  }
+
+
+  .beach-text {
+	  font-size: larger;
+	  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .testimonial-items {
+	width: auto;
+	height:20% ;
+	background-color: rgb(165, 196, 196);
+	border-radius: 15px;
+	padding: 20px;
+	margin: 20px;
+  }
+
+  .person {
+	  height: 100%;
+	  object-fit: scale-down;
+  }
+
+  .people-images {
+	  position: relative;
+	  width: auto;
+	  height: 200px ;
+	  overflow: hidden;
+  }
+
+  .text-section {
+	  position: relative;
+  }

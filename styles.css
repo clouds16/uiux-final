@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Style the body */
+  body {
+    font-family: Arial;
+    margin: 0;
+  }
+
+
+  
+  /* Header/logo Title */
+  .header {
+    padding: 60px;
+    text-align: center;
+    background: #2aaccc;
+    color: white;
+  }
+  
+  /* Style the top navigation bar */
+  .navbar {
+    display: flex;
+    background-color: #333;
+    height: 10%;
+  }
+  
+  /* Style the navigation bar links */
+  .navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  /* Change color on hover */
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+    #hamitems { display: flex; }
+    #hamnav label, #hamburger { display: none; }
+    #hamitems a {
+        flex-grow: 1;
+        flex-basis: 0;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+    }
+    
+    #hamitems a:hover { background: #401408; }
+
+/* dynamic navbar */
+
+  @media (max-width: 900px) {
+    .row, .navbar {   
+      flex-direction: column;
+    }
+
+    #hamitems a {
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        border-top: 1px solid #333;
+      }
+      /* (B) SHOW HAMBURGER ICON */
+      #hamnav label { 
+        display: inline-block; 
+        color: white;
+        background: #a02620;
+        font-style: normal;
+        font-size: 1.2em;
+        padding: 10px;
+      }
+    
+      /* (C) TOGGLE SHOW/HIDE MENU */
+      #hamitems { display: none; }
+      #hamnav input:checked ~ #hamitems { display: block; }
+
+  }
+
+
+
+
+
+  /* Column container */
+  .row {  
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+  .side {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+  /* Main column */
+  .main {
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+  }
+  
+  /* Fake image, just for this example */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+  }
+  
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  
+.mybutton {
+    width: auto;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,.4);
+    border-color: none;
+    
+    
+}
+
+@media (max-width: 700px){
+    .mybutton{
+        float: right;
+        margin: 20px 20px;
+        background-color: royalblue;
+    }
+}
+
+[aria-expanded='false'] {
+    background-color: red;
+}
+
+
+.dataitem {
+  width: auto;
+  height:20% ;
+  background-color: aqua;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px;
+}

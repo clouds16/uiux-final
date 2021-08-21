@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "week7",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "mustache-test"
+	}
+}
