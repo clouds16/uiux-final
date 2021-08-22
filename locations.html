@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet/less" type="text/css" href="styles/styles.less" >
+   
+    <link rel= "stylesheet/css" type="text/css" href="styles/styles.css" >
+    <link rel="stylesheet/less" type="text/css" href="styles/locations.less" >
+
+
+    <script src="js/less.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/mustache.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+
+
+    <title>Destinations </title>
+</head>
+
+<body>
+
+
+  <!-- Navigation Bar -->
+  <!-- Navigation Bar -->
+  <div class="navbar"  id="hamnav" role="navigation">
+    <label for="hamburger">&#9776;</label>
+    <input type="checkbox" id="hamburger"/>
+    <a href="index.html" float="right">Home </a>
+    <a href="locations.html">Locations</a>
+    <a href="activities.html">Activities</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact Us!</a>  
+  </div>
+
+
+  <div>
+    <h2>Explore Our Beautuful Beaches</h2>
+  </div>
+
+
+  <section class="destinations">
+    <div class="grid">
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <div class="footer">
+
+    <div class="items">
+      <h5 class='subtext'>
+        Hector Alvarez 2021 UI/UX Final
+      </h5>
+    </div>
+</div>
+
+  <script >
+    var myData = [
+        {
+            "destination": "Cancun",
+            "country" : "Mexico" ,
+            "price_point" : "$3000" , 
+            "satisfaction" : "9/10",
+            "image" : "images/cancun.jpg",
+            "link": "https://www.mexicancaribbean.travel/cancun/"
+         },
+         {
+            "destination": "Waikiki",
+            "country" : "Hawaii" ,
+            "price_point" : "$5000" , 
+            "satisfaction" : "8/10",
+            "image" : "images/hawaii.jpg",
+            "link": "https://www.gohawaii.com/islands/oahu/regions/honolulu/Waikiki"
+         },
+        
+         {
+            "destination": "Huatulco",
+            "country" : "Mexico" ,
+            "price_point" : "$2000" , 
+            "satisfaction" : "8/10",
+            "image" : "images/huatulco.jpg",
+            "link": "https://www.visitmexico.com/en/oaxaca/huatulco"
+         },
+        
+         {
+            "destination": "Kahanamoku",
+            "country" : "Hawaii" ,
+            "price_point" : "$4000" , 
+            "satisfaction" : "8/10",
+            "image" : "images/hawaii.jpg",
+            "link":"https://www.visitmexico.com/en/oaxaca/huatulco"
+         },
+         {
+            "destination": "Copacabana",
+            "country" : "Rio De Jainero, Brazil" ,
+            "price_point" : "$4000" , 
+            "satisfaction" : "8/10",
+            "image" : "images/beach1.jpg",
+            "link":"https://www.visitmexico.com/en/oaxaca/huatulco"
+         },
+         {
+            "destination": "Matira Beach",
+            "country" : "Bora Bora, French Polynesia" ,
+            "price_point" : "$4000" , 
+            "satisfaction" : "8/10",
+            "image" : "images/matira.jpg",
+            "link":"https://www.visitmexico.com/en/oaxaca/huatulco"
+         },
+         {
+            "destination": "Maya Bay",
+            "country" : "Thailand" ,
+            "price_point" : "$4000" , 
+            "satisfaction" : "8/10",
+            "image" : "images/mayabay.jpg",
+            "link":"https://www.visitmexico.com/en/oaxaca/huatulco"
+         },
+         {
+            "destination": "white Haven",
+            "country" : "Australia" ,
+            "price_point" : "$4000" , 
+            "satisfaction" : "8/10",
+            "image" : "images/whitehaven.jpg",
+            "link":"https://www.visitmexico.com/en/oaxaca/huatulco"
+         },
+         {
+            "destination": "Miami Beach",
+            "country" : "Miami, Florida " ,
+            "price_point" : "$4000" , 
+            "satisfaction" : "8/10",
+            "image" : "images/cancun.jpg",
+            "link":"https://www.visitmexico.com/en/oaxaca/huatulco"
+         },
+         
+    ] ;
+
+    $.each(myData, function(index, item) {
+        var html =  
+            '<div class="container" >  '
+           + '  <img  class= "beachpics" src= {{image}}>  ' 
+           +  ' <div class="col beach-text" >  ' 
+            + ' <p> {{destination }} , {{country}} <br> Price Point: {{price_point}} <br> Satisfaction {{satisfaction}}</p>  ' 
+            + '</div>'
+            + '<div class="explore-btn" > <button class="mybutton" > Explore More ! </button>  </div>'
+            + ' </div> ' ;
+        $('.grid').append(Mustache.render(html, item));  
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>
+
+

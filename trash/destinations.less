@@ -1,0 +1,120 @@
+@base-violet : rgb(85,85,223) ;
+@base-white : rgb(255, 255, 255);
+@base-blue : rgba(12, 116, 185, 0.6) ;
+@base-transparent : rbga(255,255,255, .55);
+@base-orange : rgb(221, 94, 94);
+@base-cream : rgb(218, 208, 195);
+@standard-padding: 15px 15px;
+@base-charcoal: rgb(83, 83, 83) ;
+@glass-orange : rgba(236, 158, 158, 0.9);
+
+
+
+.container-destinations {
+  display: flex;
+  justify-content: space-between;
+  height: 90vh;
+  overflow: scroll;
+}
+
+.section1 {
+  flex: 2 ;
+  height: 100%;
+  overflow: scroll;
+  padding: 30px 30px;
+}
+
+
+.section2 {
+  flex:1;
+  overflow: hidden;
+  min-height: 800px;
+}
+
+
+.links-container {
+background-color: @base-orange;
+height: 80%;
+margin: 15%  10% ;
+border-radius: 30px;
+align-items: center;
+padding: 20px 20px;
+overflow: hidden;
+}
+
+.textonimage {
+  display: none;
+}
+
+
+
+.dataitem {
+  display: flex;
+  align-items: center;
+  justify-content: ce;
+  
+
+	width: auto;
+	height: 30% ;
+	background-color:@base-orange;
+	border-radius: 15px;
+
+	margin: 8% 8% ;
+  overflow: hidden;
+  }
+
+ 
+
+  .beach-text {
+    flex :1;
+    margin: 20px 20px;
+	  font-size: larger;
+	  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .beach-pics {
+    flex: 2;
+
+
+  }
+  .beachimg {
+    height: auto;
+    width:  auto;
+    
+    overflow: hidden;
+  }
+  
+
+  @media (max-width: 1200px) {
+    .container-destinations {
+        flex-direction: column-reverse;
+    }
+    .section2 {
+      display: none;
+    }
+
+    .beach-pics{
+      position: relative;
+
+    }
+
+    .beach-text{
+      display: none;
+    
+      
+    }
+
+    .beachimg {
+      opacity: .60;
+    }
+
+    .textonimage {
+      display: block;
+      position: absolute;
+      top: 50%;
+      padding: 10px 10px;
+
+    }
+
+
+    }

@@ -1,0 +1,75 @@
+@base-violet : rgb(85,85,223) ;
+@base-white : rgb(255, 255, 255);
+@base-blue : rgba(12, 116, 185, 0.6) ;
+@base-transparent : rgba(255,255,255, .35);
+@base-orange : rgb(221, 94, 94);
+@base-cream : rgb(218, 208, 195);
+@standard-padding: 15px 15px;
+@base-charcoal: rgb(83, 83, 83) ;
+@glass-orange : rgba(236, 158, 158, 0.9);
+@glass-white: rgba(255,255,255, .50);
+@main-font : 'Montserrat', sans-serif  ;
+
+
+.destinations {
+    display: flex;
+    justify-content: center;
+}
+
+.grid {
+    
+    width: 100%;
+    height: auto;
+    
+    display: grid;
+    grid-template-rows: 30% 30% 30%;
+    grid-template-columns: 30% 30% 30%;
+    margin: 3% 3%;
+
+}
+
+.container {
+    background-color: @glass-white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 20px;
+    padding: 5px 5px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+
+.beachpics {
+    flex: 2;
+    object-fit: cover; 
+    height:  100%;
+    width: 100%;
+
+}
+
+.beach-text {
+    flex: 1;
+    
+}
+
+.explore-btn {
+    flex: 1;
+}
+
+@media (max-width: 1400px){
+    .grid {
+        grid-template-rows: 45% 45% ;
+        grid-template-columns: 45% 45%;
+    }
+}
+
+
+@media (max-width: 900px){
+    .grid {
+        grid-template-rows: 100% ;
+        grid-template-columns: 100% ;
+    }
+}

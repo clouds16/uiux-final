@@ -1,0 +1,166 @@
+
+* {
+	box-sizing: border-box;
+}
+
+/* color theme */
+
+@base-violet : rgb(85,85,223) ;
+@base-white : rgb(255, 255, 255);
+@base-blue : rgba(12, 116, 185, 0.6) ;
+@base-transparent : rgba(255,255,255, .35);
+@base-orange : rgb(221, 94, 94);
+@base-cream : rgb(218, 208, 195);
+@standard-padding: 15px 15px;
+@base-charcoal: rgb(83, 83, 83) ;
+@glass-orange : rgba(236, 158, 158, 0.9);
+@glass-white: rgba(255,255,255, .50);
+@main-font : 'Montserrat', sans-serif  ;
+
+
+body {
+	font-family: @main-font;
+	margin: 0;
+	font-weight: 700;
+    letter-spacing: 1.4px;
+	
+	background: linear-gradient(@base-cream, @glass-orange);
+}
+.header {
+	padding: 60px;
+	text-align: center;
+	background: @base-cream;
+	color: @base-white;
+}
+
+.footer {
+    height: 10%;
+    background-color: @base-charcoal;
+	color: @base-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	.subtext{
+		color: @base-white;
+		font-family: @main-font;
+	}
+	
+}
+
+.subtext {
+	color: @base-white;
+}
+
+.backdrop {
+	height: 80vh;
+	background-image: linear-gradient( rgb(255,255,255),rgb(85,85,223));
+}
+
+
+.navbar {
+	font-size: 12px;
+	position: sticky;
+	display: flex;
+	background-color:@base-orange;
+	height: 10%;
+	a {
+		color: @base-white;
+		padding: @standard-padding;
+		text-decoration: none;
+		text-align: center;
+		&:hover {
+			background-color: @base-white;
+			color: @base-orange;
+		}
+		&:visited {
+			text-decoration: none;
+			// color: @base-white;
+		}
+		&:active {
+			text-decoration: none;
+			color: @base-orange;
+			background-color: @base-white;
+		}
+	}
+	
+}
+.active {
+	text-decoration: none;
+	color: @base-orange;
+	background-color: @base-white;
+}
+
+
+#hamitems {
+	display: flex;
+	a {
+		flex-grow: 1;
+		flex-basis: 0;
+		padding: 10px;
+		color: white;
+		text-decoration: none;
+		text-align: center;
+		&:hover {
+			background: @base-orange;
+		}
+	}
+}
+#hamnav {
+	label {
+		display: none;
+	}
+}
+#hamburger {
+	display: none;
+}
+
+
+@media (max-width: 700px) {
+	.mybutton {
+		float: right;
+		margin: 20px 20px;
+		background-color: @base-white;
+	}
+}
+
+
+a {
+	text-decoration: none;
+	color: @base-white;
+	&:visited{
+		font-weight: bold;
+	}
+}
+
+
+
+.mybutton {
+	padding: 0.35em 1.2em;
+	border: 0.1em solid  @base-orange;    /* example of mixin */
+	margin: 0 0.3em 0.3em 0;
+	height: 40px;
+	width: auto;
+	border-radius: 0.12em;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: 'Roboto',sans-serif;
+	font-weight: 300;
+	background-color:@base-transparent;
+	text-align: center;
+	transition: all 0.2s;
+	&:hover {
+		color: @base-orange;
+		background-color: @base-white;
+	}
+}
+
+input[type=text], select {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+  }
+

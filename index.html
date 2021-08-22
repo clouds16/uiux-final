@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet/less" type="text/css" href="styles.less" >
-    <script src="less.js" type="text/javascript"></script>
-    <script type="text/javascript" src="mustache.js"></script>
-    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet/less" type="text/css" href="styles/styles.less" >
+    <link rel="stylesheet/less" type="text/css" href="styles/home.less" >
+    
+    <link rel= "stylesheet/css" type="text/css" href="styles/styles.css" >
+    <script src="js/less.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/mustache.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <title> Home </title>
 </head>
 
 <body>
@@ -19,54 +22,82 @@
   <div class="navbar"  id="hamnav" role="navigation">
     <label for="hamburger">&#9776;</label>
     <input type="checkbox" id="hamburger"/>
-    
     <a href="index.html" float="right">Home </a>
-    <a href="destinations.html">Locations</a>
+    <a href="locations.html">Locations</a>
+    <a href="activities.html">Activities</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact Us!</a>  
-    
-    
-    
+  </div>
 
-    </div>
 
-  <div class="header" role="banner">
+
+
+  <!-- <div class="header" role="banner">
     <img role="logo" aria-label="Official logo for my mock company Beachfront" src="images/beachfront-logo.png" height="200px" width="200px"/>
     <h1> Mustache has been used on the Destinations & About Page  </h1>
+  </div> -->
 
-  </div>
-  
-  <!-- The flexible grid (content) -->
-  <div class="row" role="presentation">
-    <div class="side" role="complementary">
-      <h2>About Me</h2>
-      <h5>Photo of me:</h5>
-      <img role="img" src="images/image.jpg" aria-label="image of owner" height="200" width="200">
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+  <div class="main">
 
-
-
-    </div>
-
-    <div class="main" role="contentinfo">
-      <h2>Blog Post 1  </h2>
-      <h5>Title description, Dec 7, 2017</h5>
-      <img role="img" height="400px" width="auto" src="images/beach.jpg"  aria-label="picture of a beach">
-   
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <div class="container">
+    
+      <div class="col items1">
         
 
-      <button class="mybutton Button1"  aria-expanded="true"> Button 1</button>
-      <button class="mybutton Button2"  aria-checked="false" > Button 2</button>
-      <button class="mybutton Button3" aria-checked="false"> Button 3</button>
-      <button class= "mybutton Button4" aria-checked="false" role="switch"> Button 4</button>
-    </div>
-  </div>
+        <div class="start">
+          <h1> GET STARTED! </h1>
+          <form action="">
+          
+            <input type="text" placeholder="Location"  >
   
+            <label for="Stay Date">Date:</label>
+            <input type="date"  name="">
+            
+            <label for="Stay Date">To: </label>
+            <input type="date"  name="">
+  
+            <input type="submit" value="Submit" class= "mybutton" >
+          </form>
+        </div>
+        <br>
+
+        <div class="explore"> 
+          <h1>EXPLORE:</h1>
+          <a href="about.html"><button class="mybutton">  LEARN ABOUT US! </button> </a>
+          <a href="destinations.html"> <button class="mybutton"> CHECK LOCATIONS </button></a>
+        </div>
+        
+      </div>
+
+
+      <div class="col items2">
+        
+        <ul>
+          <h3>Let BeachFront Do All The Hard Work For You!</h3>
+          <li>Over 900 Destinations Worldwise</li>
+          <li>The best Traveler experience according to Travel USA!</li>
+          <li>Over 200 Activitites per location to choose from</li>
+          <li>Tours Provided in every package!</li>
+          <li>The most luxurious experience at a great cost! </li>
+          <li> International </li>
+          <li> Best Customer Service Reviews!</li>
+          <li> 99% customer satisfaction</li>
+        </ul>
+      </div>
+
+    </div>
+    
+  </div>
+
+
   <!-- Footer -->
   <div class="footer">
-    <h2>Footer</h2>
+
+      <div class="items">
+        <h5 class='subtext'>
+          Hector Alvarez 2021 UI/UX Final
+        </h5>
+      </div>
   </div>
     
 </body>

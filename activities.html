@@ -1,0 +1,106 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet/less" type="text/css" href="styles/styles.less" >
+    <link rel= "stylesheet/css" type="text/css" href="styles/styles.css" >
+    <link rel="stylesheet/less" type="text/css" href="styles/locations.less" >
+
+
+    <script src="js/less.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/mustache.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <title>Destinations </title>
+</head>
+
+<body>
+
+
+  <!-- Navigation Bar -->
+  <div class="navbar"  id="hamnav" role="navigation">
+    <label for="hamburger">&#9776;</label>
+    <input type="checkbox" id="hamburger"/>
+    <a href="index.html" float="right">Home </a>
+    <a href="locations.html">Locations</a>
+    <a href="activities.html">Activities</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact Us!</a>  
+  </div>
+
+
+  <div>
+    <h2>Explore Our Awesome Activities!</h2>
+  </div>
+
+
+  <section class="activities">
+    <div class="grid">
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <div class="footer">
+
+    <div class="items">
+      <h5 class='subtext'>
+        Hector Alvarez 2021 UI/UX Final
+      </h5>
+    </div>
+</div>
+
+  <script >
+    var myData = [
+        {
+            "activity": "Wine Tasting",
+            "availability" : "Anywhere" ,
+            "price" : "$300" , 
+            "satisfaction" : "9/10",
+            "image" : "images/activities/wine.jpg",
+ 
+         },
+         {
+            "activity": "Jet Skiing",
+            "availability" : "Anywhere" ,
+            "price" : "$200" , 
+            "satisfaction" : "9/10",
+            "image" : "images/activities/jetski.jpg",
+ 
+         },
+         {
+            "activity": "Horse Back Riding",
+            "availability" : "US/Mexico" ,
+            "price" : "$150" , 
+            "satisfaction" : "9/10",
+            "image" : "images/activities/horse.jpg",
+ 
+         },
+
+         
+    ] ;
+
+    $.each(myData, function(index, item) {
+        var html =  
+            '<div class="container" >  '
+           + '  <img  class= "image" src= {{image}}>  ' 
+           +  ' <div class="col activity-text" >  ' 
+            + ' <p> {{activity}} , Availability : {{availability}} <br> Price Point: {{price}} <br> Satisfaction {{satisfaction}}</p>  ' 
+            + '</div>'
+            + '<div class="explore-btn" > <button class="mybutton" > Explore More ! </button>  </div>'
+            + ' </div> ' ;
+        $('.grid').append(Mustache.render(html, item));  
+    });
+</script>
+
+
+
+
+
+
+</body>
+</html>
