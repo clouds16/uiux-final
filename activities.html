@@ -15,7 +15,7 @@
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 
 
-    <title>Destinations </title>
+    <title> Activities </title>
 </head>
 
 <body>
@@ -105,12 +105,12 @@
 
     $.each(myData, function(index, item) {
         var html =  
-            '<div class="container" >  '
-           + '  <img  class= "images" src= {{image}}>  ' 
+            '<div class="container" role="contentinfo" >  '
+           + '  <img  class= "images" src= {{image}} aria-label="image of activity {{activity}}">  ' 
            +  ' <div class="col text" >  ' 
             + ' <p> {{activity }} , Available : {{ available}} <br> Price Point: {{price}} <br> Satisfaction {{satisfaction}}</p>  ' 
             + '</div>'
-            + '<div class="explore-btn" > <button class="mybutton" > Explore More ! </button>  </div>'
+            + '<div class="explore-btn" role="button" aria-label="Explore more about this item" > <button class="mybutton" > Explore More ! </button>  </div>'
             + ' </div> ' ;
         $('.grid').append(Mustache.render(html, item));  
     });

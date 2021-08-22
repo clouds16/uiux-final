@@ -11,7 +11,7 @@
     <script src="js/less.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/mustache.js"></script>
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <title>Destinations </title>
+    <title> About Page </title>
 </head>
 
 <body>
@@ -29,39 +29,36 @@
   </div>
 
 
-
-
- 
-      <div class="main">
+      <div class="main" role="heading">
         <div class="about-container">
-
-          
           <img class="founder-img" src="images/founder.jpeg" alt="CEO">
-          
-
-          <div class="about summary">
+          <div class="about summary" role="doc-abstract">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum. At lectus urna duis convallis convallis. Mauris vitae ultricies leo integer. Mattis aliquam faucibus purus in massa tempor nec feugiat nisl. Sagittis purus sit amet volutpat consequat mauris nunc congue. Mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus. Turpis massa sed elementum tempus egestas sed sed risus. Sollicitudin tempor id eu nisl nunc mi. Et tortor at risus viverra adipiscing at in tellus integer. Mollis aliquam ut porttitor leo a. Sed faucibus turpis in eu mi bibendum neque egestas. Aliquam faucibus purus in massa tempor nec feugiat nisl. Dictum sit amet justo donec enim diam vulputate. Nullam non nisi est sit. Dolor sit amet consectetur adipiscing elit ut aliquam. Semper risus in hendrerit gravida rutrum quisque non tellus. Nibh praesent tristique magna sit amet purus gravida quis.
 
            tate eu. Aliquam vestibulum morbi blandit cursus risus. Non sodales neque sodales ut. Enim nulla aliquet porttitor lacus luctus accumsan tortor. Penatibus et magnis dis parturient montes nascetur ridiculus mus mauris. Sit amet facilisis magna etiam. Adipiscing vitae proin sagittis nisl rhoncus mattis.
-              
-             
           </div>
         </div>
       </div>
          
 
-          <div class ="testimonials">
-            <h2> Testimonials </h2>
+      
+
+          <div class ="testimonials" role="doc-acknowledgments">
+            <h1 class="sectional-text"> Testimonials </h1>
           </div>
       
         
      
-    
 
   
-      <div class="footer">
-        <h2>Footer</h2>
-      </div>
+          <div class="footer" >
+
+            <div class="items">
+              <h5 class='subtext'>
+                Hector Alvarez 2021 UI/UX Final
+              </h5>
+            </div>
+        </div>
     
   <script >
     var myData = [
@@ -103,7 +100,7 @@
            + '  <div class="people-images" > <img  class= "person" src= {{image}} height="100px" width="auto" object-fit="scale-down"> </div> ' 
            +  ' <div class="text-section" >  ' 
               
-            + '  <p> Testimonial by :  {{name}} <br> Place of stay: {{destination}} ,  {{rating}} </b>   {{comment}}</p> ' 
+            + '  <p> Testimonial by :  {{name}} <br> Place of stay: {{destination}} ,  {{rating}} <br>   {{comment}}</p> ' 
             + '</div>'
 
             + '</div>' ;

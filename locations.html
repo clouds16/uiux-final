@@ -16,7 +16,7 @@
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 
 
-    <title>Destinations </title>
+    <title> Locations </title>
 </head>
 
 <body>
@@ -137,12 +137,12 @@
 
     $.each(myData, function(index, item) {
         var html =  
-            '<div class="container" >  '
+            '<div class="container" role="contentinfo">  '
            + '  <img  class= "beachpics" src= {{image}}>  ' 
            +  ' <div class="col beach-text" >  ' 
             + ' <p> {{destination }} , {{country}} <br> Price Point: {{price_point}} <br> Satisfaction {{satisfaction}}</p>  ' 
             + '</div>'
-            + '<div class="explore-btn" > <button class="mybutton" > Explore More ! </button>  </div>'
+            + '<div class="explore-btn" aria-label="explore more about this item"> <button class="mybutton"  role="button"> Explore More ! </button>  </div>'
             + ' </div> ' ;
         $('.grid').append(Mustache.render(html, item));  
     });
